@@ -49,7 +49,7 @@ function EventBody({ event, notice }: { event: CanonicalGroupEvent; notice?: str
   if (notice) {
     const detail = event.payload.error || event.payload.reason || event.payload.reason_code
 
-    return <p className="text-xs text-(--ui-text-secondary)" data-selectable-text="true">
+    return <p className="text-(--ui-text-secondary)" data-selectable-text="true" data-slot="group-chat-message-content">
       <strong>{notice}</strong>{detail && <>: {detail}</>}
     </p>
   }
